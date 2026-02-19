@@ -22,3 +22,12 @@ venv/
 
 # Temporary files
 *.tmp
+
+# Txt files
+*.txt
+
+# CSV files
+*.csv
+
+# JSON files
+*.json
