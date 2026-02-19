@@ -1,0 +1,24 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Build folders
+bin/
+build/
+dist/
+
+# Python
+__pycache__/
+venv/
+*.pyc
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
