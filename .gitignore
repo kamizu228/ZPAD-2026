@@ -23,9 +23,6 @@ venv/
 # Temporary files
 *.tmp
 
-# Txt files
-*.txt
-
 # CSV files
 *.csv
 
