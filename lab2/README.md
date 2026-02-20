@@ -20,5 +20,8 @@
 
 ```bash
 python -m venv venv
+# Для Windows:
 .\venv\Scripts\Activate.ps1
+# Для Linux/macOS:
+source venv/bin/activate
 pip install -r requirements.txt
