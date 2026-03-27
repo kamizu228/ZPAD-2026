@@ -50,4 +50,9 @@ python -m venv venv
 # Для Linux/macOS:
 source venv/bin/activate
 
+# Встановлення залежностей
 pip install -r requirements.txt
+
+# Запуск лабораторної роботи
+jupyter notebook
+```
