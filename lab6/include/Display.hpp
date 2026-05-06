@@ -11,7 +11,7 @@ public:
     bool isOpen() const; 
 
     void show(const cv::Mat& frame); 
-    void setMouseCallback(cv::MouseCallback onMouse, void* userdata = nullptr); // Виправили велику B
+    void setMouseCallback(cv::MouseCallback onMouse, void* userdata = nullptr);
     void addTrackbar(const std::string& trackbarName, int maxValue);
     int getTrackbarValue(const std::string& trackbarName) const;
 };

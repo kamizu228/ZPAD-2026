@@ -1,4 +1,4 @@
-#include "../include/Display.hpp"
+#include "Display.hpp"
 
 Display::Display(const std::string& name) : windowName(name) {
     cv::namedWindow(windowName, cv::WINDOW_NORMAL);

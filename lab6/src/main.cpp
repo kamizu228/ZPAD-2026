@@ -1,8 +1,8 @@
-#include "../include/CameraProvider.hpp"
-#include "../include/KeyProcessor.hpp"
-#include "../include/FrameProcessor.hpp"
-#include "../include/Display.hpp"
-#include "../include/MouseProcessor.hpp"
+#include "CameraProvider.hpp"
+#include "KeyProcessor.hpp"
+#include "FrameProcessor.hpp"
+#include "Display.hpp"
+#include "MouseProcessor.hpp"
 #include <iostream>
 
 int main() {

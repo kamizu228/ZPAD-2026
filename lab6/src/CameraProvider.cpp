@@ -1,4 +1,4 @@
-#include "../include/CameraProvider.hpp"
+#include "CameraProvider.hpp"
 #include <iostream>
 
 CameraProvider::CameraProvider(int camId) {

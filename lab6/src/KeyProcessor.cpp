@@ -1,4 +1,4 @@
-#include "../include/KeyProcessor.hpp"
+#include "KeyProcessor.hpp"
 #include <iostream>
 
 KeyProcessor::KeyProcessor() : curMode(ProcessMode::NORMAL) {}
