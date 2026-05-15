@@ -7,5 +7,6 @@ class FrameProcessor {
 private:
     FaceDetector faceDetector;
 public:
+    FrameProcessor();
     cv::Mat process(const cv::Mat& inputFrame, ProcessMode mode);
 };

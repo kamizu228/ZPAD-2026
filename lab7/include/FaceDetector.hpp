@@ -1,26 +1,34 @@
-// Винести детекцію обличчя в окремий потік, щоб відео залишалось ідеально плавним (30-60 FPS), а рамка оновлювалась асинхронно.
 #pragma once
 #include <opencv2/opencv.hpp>
 #include <opencv2/dnn.hpp>
 #include <thread>
 #include <mutex>
+#include <condition_variable>
 #include <atomic>
 #include <vector>
 #include <string>
-
-class FaceDetector {
-private:
-    cv::dnn::Net net;
-    bool isNetLoaded = false;
-    std::atomic<bool> isAiRunning{false};
-    std::mutex mtx;
 
     struct DetectResult {
         cv::Rect box;
         float confidence;
     };
+
+class FaceDetector {
+private:
+    cv::dnn::Net net;
+    std::mutex mtx;
+    std::thread workerThread;
+    std::condition_variable cv;
+
+    std::atomic<bool> isRunning{true};
+    bool hasNewFrame = false;
+    cv::Mat currentFrame;
+
     std::vector<DetectResult> lastResults;
-    void runAIInBackground(cv::Mat frameCopy);
+    void runAIInBackground();
 public:
-    void detectDNNsync(cv::Mat& frame);
+    FaceDetector(const std::string& prototxtPath, const std::string& modelPath);
+    ~FaceDetector();
+    void updateFrame(const cv::Mat& frame);
+    std::vector<DetectResult> getResults();
 };
